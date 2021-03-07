@@ -22,8 +22,8 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--dark);
-  background: url('/images/bg-pattern-top.svg'),
-    url('/images/bg-pattern-bottom.svg'), hsl(185, 75%, 39%);
+  background: url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg'), hsl(185, 75%, 39%);
   background-repeat: no-repeat;
   background-position: -25vw -80vh, 50vw 50vh;
 }
