@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --gray: hsl(0, 0%, 59%);
+  --dark: hsl(229, 23%, 23%);
+  --bg-color: hsl(185, 75%, 39%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  background: url('/images/bg-pattern-top.svg'),
+    url('/images/bg-pattern-bottom.svg'), hsl(185, 75%, 39%);
+  background-repeat: no-repeat;
+  background-position: -25vw -80vh, 50vw 50vh;
+}
+
+.card {
+  width: 350px;
+  height: 375px;
+  display: grid;
+  grid-template-rows: 1.9fr 2fr 1.25fr;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 20px 50px 0 rgb(0 0 0 / 20%);
+}
+
+.card .top {
+  background: url('images/bg-pattern-card.svg');
+}
+
+.card .middle {
+  text-align: center;
+  padding-top: 75px;
+  position: relative;
+}
+
+.card .middle img {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.name {
+  padding-bottom: 15px;
+}
+
+.age {
+  color: var(--gray);
+  padding-left: 5px;
+}
+
+.city {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.card .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.bold {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stat_title {
+  color: var(--gray);
+  font-size: 10px;
+  margin-top: 7px;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: hsl(227, 100%, 95%);
+}
+
+.attribution p {
+  display: inline-block;
+}
+
+.attribution a {
+  color: var(--dark);
+  padding: 5px 12px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.attribution a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 27px;
+  top: -4px;
+  left: 0;
+  transform: skew(-20deg);
+  background: #fff;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.attribution a:hover::before {
+  transform: skew(0deg);
+  border: 1px solid #fff;
+  background: transparent;
+}
+
+.attribution a:hover {
+  color: #fff;
+}
+
+.attribution a:active::before {
+  background: #fff;
+}
+
+.attribution a:active {
+  color: var(--dark);
+}
+
+@media (max-width: 430px) {
+  .card {
+    width: 95vw;
+    margin-bottom: 30px;
+  }
+
+  .attribution {
+    font-size: 11px;
+    bottom: 5px;
+  }
+
+  .attribution p:last-child {
+    margin-top: 8px;
+  }
+
+  .attribution a {
+    padding: 3px 10px;
+  }
+
+  .attribution a::before {
+    width: 100%;
+    height: 22px;
+    top: -5px;
+  }
+}
